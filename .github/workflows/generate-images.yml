@@ -5,6 +5,9 @@ on:
   schedule:
     - cron: '0 12 * * 1'  # Weekly on Mondays at noon UTC
 
+permissions:
+  contents: write  # Allow the action to write to the repository
+
 jobs:
   generate-and-deploy:
     runs-on: ubuntu-latest
@@ -34,5 +37,3 @@ jobs:
         git add docs/images/ docs/images-metadata.json
         git diff --staged --quiet || git commit -m "Update AI generated images [skip ci]"
         git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
