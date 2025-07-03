@@ -1,0 +1,38 @@
+name: Generate AI Images and Deploy
+
+on:
+  workflow_dispatch:  # Manual trigger
+  schedule:
+    - cron: '0 12 * * 1'  # Weekly on Mondays at noon UTC
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Generate images
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: npm run generate-images
+      
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/images/ docs/images-metadata.json
+        git diff --staged --quiet || git commit -m "Update AI generated images [skip ci]"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

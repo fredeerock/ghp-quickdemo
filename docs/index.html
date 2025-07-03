@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Generated Images Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI Generated Images Gallery</h1>
+        <p>Featuring beautiful images created with OpenAI's DALL-E</p>
+    </header>
+    
+    <main>
+        <section class="featured-image">
+            <h2>Featured Image</h2>
+            <div id="featured-container">
+                <img id="featured-image" src="" alt="Featured AI Generated Image">
+                <p id="featured-description"></p>
+            </div>
+        </section>
+        
+        <section class="gallery">
+            <h2>All Generated Images</h2>
+            <div id="gallery-grid">
+                <!-- Images will be populated by JavaScript -->
+            </div>
+        </section>
+        
+        <section class="about">
+            <h2>About This Project</h2>
+            <p>This website showcases AI-generated images created using OpenAI's DALL-E API. The images are generated using Node.js and automatically deployed to GitHub Pages.</p>
+            <p>One image is randomly selected to be featured on each generation cycle.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Generated with ❤️ using OpenAI API | <span id="generation-time"></span></p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
