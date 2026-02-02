@@ -1,8 +1,8 @@
 {
   "selectedImage": {
-    "filename": "image-2.png",
-    "prompt": "A futuristic city skyline with flying cars and neon lights against a starry night sky",
-    "url": "./images/image-2.png"
+    "filename": "image-3.png",
+    "prompt": "A cozy coffee shop interior with warm lighting, books on shelves, and steam rising from a cup",
+    "url": "./images/image-3.png"
   },
   "allImages": [
     {
@@ -21,5 +21,5 @@
       "url": "./images/image-3.png"
     }
   ],
-  "generatedAt": "2026-01-26T12:52:50.468Z"
+  "generatedAt": "2026-02-02T13:03:30.816Z"
 }
