@@ -1,25 +1,4 @@
 {
-  "selectedImage": {
-    "filename": "image-3.png",
-    "prompt": "A cozy coffee shop interior with warm lighting, books on shelves, and steam rising from a cup",
-    "url": "./images/image-3.png"
-  },
-  "allImages": [
-    {
-      "filename": "image-1.png",
-      "prompt": "A serene mountain landscape at sunset with vibrant orange and pink clouds reflecting on a calm lake",
-      "url": "./images/image-1.png"
-    },
-    {
-      "filename": "image-2.png",
-      "prompt": "A futuristic city skyline with flying cars and neon lights against a starry night sky",
-      "url": "./images/image-2.png"
-    },
-    {
-      "filename": "image-3.png",
-      "prompt": "A cozy coffee shop interior with warm lighting, books on shelves, and steam rising from a cup",
-      "url": "./images/image-3.png"
-    }
-  ],
-  "generatedAt": "2026-05-11T14:56:07.598Z"
+  "allImages": [],
+  "generatedAt": "2026-05-18T15:34:32.744Z"
 }
